@@ -4,7 +4,7 @@
 we use ` ?? ` operators to check if a value is either null or undefined.
 
 if it is any of these it evaluates to false and moves to the next instruction
-```
+```js
 let data=null;
 let dataIsNullish= data ?? true;
 ```
@@ -13,7 +13,7 @@ more examples -> <a href="https://github.com/eugenesang/JsBasics/blob/main/nulli
 sometimes mistakes occur and we try to use attributes of an object that are not available
 
 to avoid this we use a ` ?` before the dot operator
-```
+```js
 let obj={
 a:20,
 c:"available"
