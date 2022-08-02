@@ -16,7 +16,7 @@ In this style, a process is run when there is space for it to run allowing other
 A basic example of an asynchronous process in JavaScript is the ` setInterval ` and ` setTimeout ` functions 
 
 They do not block other processes
-```
+```js
 console.log(1);
 setInterval(()=>{
     console.log("interval")
@@ -55,7 +55,7 @@ when we call the function, a promise is returned we then tack on the ` then() ` 
 after the then method we chain on the ` catch() ` method which gets access to whatever the promise sends as reject
 
 example
-```
+```js
 let func=()=>{
     return new Promise((resolve, reject)=>{
         resolve("resolved");
@@ -70,7 +70,7 @@ func()
 there are scenarios where you need results from one asynchronous function to run another asychronous function we may chain them.
 
 example
-```
+```js
 let sub1=()=>{
     return new Promise((resolve, reject)=>{
         resolve("this is the first sub routine");
@@ -104,7 +104,7 @@ Most data recieved is in JSON format which looks like a JavaScript object but is
 the json method also returns a promise
 
 this gives us a good chance to chain them using then and catch 
-```
+```js
 fetch('database.json')
 .then(response=> {
     return response.json();
@@ -122,7 +122,7 @@ There is a better way to avoid chaining callbacks
 This is the use of  `async` and `await`
 
 lets see its implimentation of the above fetch code and discuss it
-```
+```js
 async function fetchData(url){
     let response = await fetch(url);
     let data = await response.json();
