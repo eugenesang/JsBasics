@@ -68,3 +68,32 @@ switch (menuOption) {
         break;
 }
 
+// Loops
+
+// For loop
+
+for(let i=0; i<10; i++){
+    console.log('You are in round: '+i)
+}
+
+// For of
+
+for(let num of [3, 6, 8, 10]){
+    console.log('We have number: '+ num + ' in our list')
+}
+
+// while loop
+
+var whileVal = 10;
+
+while (whileVal > 0){
+    console.log(whileVal--)
+}
+
+// do while loop
+
+do{
+    console.log(whileVal);
+}while(whileVal > 0)
+
+
