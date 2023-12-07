@@ -97,3 +97,8 @@ do{
 }while(whileVal > 0)
 
 
+// function
+
+function add(a, b){
+    return a+b;
+
